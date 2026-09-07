@@ -1,0 +1,82 @@
+/**
+ * French (fr) translations.
+ */
+import type { Translations } from './en';
+
+export const fr: Translations = {
+  nav: {
+    title: 'RechercheAliments',
+    subtitle: 'Trouver des produits alimentaires emballés',
+    login: 'Connexion',
+    logout: 'Déconnexion',
+    subscription: 'Abonnement',
+  },
+  search: {
+    placeholder: 'Rechercher un produit alimentaire (ex : "chocolat", "lait")',
+    button: 'Rechercher',
+    noResults: 'Aucun produit trouvé pour "{{query}}".',
+    noResultsHint: 'Essayez un autre terme de recherche ou vérifiez l\'orthographe.',
+    loading: 'Recherche en cours...',
+    recentTitle: 'Recherches récentes',
+    resultsCount: '{{count}} produits trouvés',
+  },
+  product: {
+    brand: 'Marque',
+    categories: 'Catégories',
+    unknownBrand: 'Marque inconnue',
+    noCategoryInfo: 'Aucune information de catégorie',
+    noImage: 'Aucune image disponible',
+  },
+  nutrition: {
+    title: 'Valeurs nutritionnelles',
+    per100g: 'pour 100g',
+    energy: 'Énergie',
+    fat: 'Matières grasses',
+    saturatedFat: 'dont acides gras saturés',
+    carbohydrates: 'Glucides',
+    sugars: 'dont sucres',
+    fiber: 'Fibres alimentaires',
+    proteins: 'Protéines',
+    salt: 'Sel',
+    notAvailable: 'Informations nutritionnelles non disponibles pour ce produit.',
+    unit: {
+      kcal: 'kcal',
+      g: 'g',
+    },
+  },
+  subscription: {
+    required: 'Les détails nutritionnels nécessitent un abonnement',
+    description: 'Abonnez-vous pour accéder aux informations nutritionnelles détaillées de tous les produits.',
+    subscribe: "S'abonner — 4,99 €/mois",
+    manage: "Gérer l'abonnement",
+    cancel: 'Annuler le plan',
+    status: "Statut de l'abonnement",
+    active: 'Actif',
+    inactive: 'Inactif',
+    canceled: 'Annulé',
+    successTitle: 'Abonnement activé !',
+    successMessage: 'Vous pouvez maintenant consulter les détails nutritionnels de tous les produits.',
+    canceledTitle: 'Paiement annulé',
+    canceledMessage: 'Votre abonnement n\'a pas été modifié.',
+    pageTitle: 'Votre abonnement',
+    pageDescription: 'Gérez votre abonnement mensuel aux données alimentaires.',
+    noSubscription: "Vous n'avez pas d'abonnement actif.",
+  },
+  login: {
+    title: 'Bon retour',
+    subtitle: 'Connectez-vous pour rechercher des produits alimentaires',
+    email: 'Adresse e-mail',
+    password: 'Mot de passe',
+    button: 'Se connecter',
+    loggingIn: 'Connexion en cours...',
+    error: 'Adresse e-mail ou mot de passe invalide. Veuillez réessayer.',
+    demoNote: 'Identifiants de démonstration',
+    demoEmail: 'demo@example.com',
+    demoPassword: 'password',
+  },
+  errors: {
+    searchFailed: 'Impossible de rechercher des produits. Veuillez réessayer.',
+    generic: "Une erreur s'est produite. Veuillez réessayer.",
+    networkError: 'Impossible de se connecter au serveur. Le backend est-il démarré ?',
+  },
+};

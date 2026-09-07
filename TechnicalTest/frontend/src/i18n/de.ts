@@ -1,0 +1,82 @@
+/**
+ * German (de) translations.
+ */
+import type { Translations } from './en';
+
+export const de: Translations = {
+  nav: {
+    title: 'LebensmittelSuche',
+    subtitle: 'Verpackte Lebensmittel finden',
+    login: 'Anmelden',
+    logout: 'Abmelden',
+    subscription: 'Abonnement',
+  },
+  search: {
+    placeholder: 'Nach einem Lebensmittelprodukt suchen (z.B. "Schokolade", "Milch")',
+    button: 'Suchen',
+    noResults: 'Keine Produkte für "{{query}}" gefunden.',
+    noResultsHint: 'Versuchen Sie einen anderen Suchbegriff oder überprüfen Sie die Schreibweise.',
+    loading: 'Suchen...',
+    recentTitle: 'Letzte Suchanfragen',
+    resultsCount: '{{count}} Produkte gefunden',
+  },
+  product: {
+    brand: 'Marke',
+    categories: 'Kategorien',
+    unknownBrand: 'Unbekannte Marke',
+    noCategoryInfo: 'Keine Kategorieinformationen',
+    noImage: 'Kein Bild verfügbar',
+  },
+  nutrition: {
+    title: 'Nährwerte',
+    per100g: 'pro 100g',
+    energy: 'Energie',
+    fat: 'Fett',
+    saturatedFat: 'davon gesättigte Fettsäuren',
+    carbohydrates: 'Kohlenhydrate',
+    sugars: 'davon Zucker',
+    fiber: 'Ballaststoffe',
+    proteins: 'Eiweiß',
+    salt: 'Salz',
+    notAvailable: 'Nährwertinformationen für dieses Produkt nicht verfügbar.',
+    unit: {
+      kcal: 'kcal',
+      g: 'g',
+    },
+  },
+  subscription: {
+    required: 'Ernährungsdetails erfordern ein Abonnement',
+    description: 'Abonnieren Sie, um detaillierte Nährwertinformationen für alle Produkte anzuzeigen.',
+    subscribe: 'Abonnieren — 4,99 €/Monat',
+    manage: 'Abonnement verwalten',
+    cancel: 'Plan kündigen',
+    status: 'Abonnementstatus',
+    active: 'Aktiv',
+    inactive: 'Inaktiv',
+    canceled: 'Gekündigt',
+    successTitle: 'Abonnement aktiviert!',
+    successMessage: 'Sie können jetzt Ernährungsdetails für alle Produkte anzeigen.',
+    canceledTitle: 'Checkout abgebrochen',
+    canceledMessage: 'Ihr Abonnement wurde nicht geändert.',
+    pageTitle: 'Ihr Abonnement',
+    pageDescription: 'Verwalten Sie Ihr monatliches Lebensmitteldaten-Abonnement.',
+    noSubscription: 'Sie haben kein aktives Abonnement.',
+  },
+  login: {
+    title: 'Willkommen zurück',
+    subtitle: 'Melden Sie sich an, um nach Lebensmitteln zu suchen',
+    email: 'E-Mail-Adresse',
+    password: 'Passwort',
+    button: 'Anmelden',
+    loggingIn: 'Anmeldung läuft...',
+    error: 'Ungültige E-Mail-Adresse oder Passwort. Bitte versuchen Sie es erneut.',
+    demoNote: 'Demo-Anmeldedaten',
+    demoEmail: 'demo@example.com',
+    demoPassword: 'password',
+  },
+  errors: {
+    searchFailed: 'Produkte konnten nicht gesucht werden. Bitte versuchen Sie es erneut.',
+    generic: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.',
+    networkError: 'Keine Verbindung zum Server möglich. Läuft das Backend?',
+  },
+};

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    /* Language and environment */
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "types": ["jest", "node"],
+
+    /* Output */
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+    /* Type checking */
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Module resolution */
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

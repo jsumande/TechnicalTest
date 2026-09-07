@@ -1,0 +1,82 @@
+/**
+ * Dutch (nl) translations.
+ */
+import type { Translations } from './en';
+
+export const nl: Translations = {
+  nav: {
+    title: 'VoedselZoeker',
+    subtitle: 'Zoek naar verpakte voedingsproducten',
+    login: 'Inloggen',
+    logout: 'Uitloggen',
+    subscription: 'Abonnement',
+  },
+  search: {
+    placeholder: 'Zoek naar een voedingsproduct (bijv. "chocolade", "melk")',
+    button: 'Zoeken',
+    noResults: 'Geen producten gevonden voor "{{query}}".',
+    noResultsHint: 'Probeer een andere zoekterm of controleer de spelling.',
+    loading: 'Zoeken...',
+    recentTitle: 'Recente Zoekopdrachten',
+    resultsCount: '{{count}} producten gevonden',
+  },
+  product: {
+    brand: 'Merk',
+    categories: 'Categorieën',
+    unknownBrand: 'Onbekend merk',
+    noCategoryInfo: 'Geen categorie-informatie',
+    noImage: 'Geen afbeelding beschikbaar',
+  },
+  nutrition: {
+    title: 'Voedingswaarden',
+    per100g: 'per 100g',
+    energy: 'Energie',
+    fat: 'Vet',
+    saturatedFat: 'waarvan verzadigd vet',
+    carbohydrates: 'Koolhydraten',
+    sugars: 'waarvan suikers',
+    fiber: 'Vezels',
+    proteins: 'Eiwitten',
+    salt: 'Zout',
+    notAvailable: 'Voedingsinformatie is niet beschikbaar voor dit product.',
+    unit: {
+      kcal: 'kcal',
+      g: 'g',
+    },
+  },
+  subscription: {
+    required: 'Voedingsdetails vereisen een abonnement',
+    description: 'Abonneer u om gedetailleerde voedingsinformatie voor alle producten te bekijken.',
+    subscribe: 'Abonneren — €4,99/maand',
+    manage: 'Abonnement Beheren',
+    cancel: 'Plan Annuleren',
+    status: 'Abonnementsstatus',
+    active: 'Actief',
+    inactive: 'Inactief',
+    canceled: 'Geannuleerd',
+    successTitle: 'Abonnement geactiveerd!',
+    successMessage: 'U kunt nu voedingsdetails bekijken voor alle producten.',
+    canceledTitle: 'Afrekenen geannuleerd',
+    canceledMessage: 'Uw abonnement is niet gewijzigd.',
+    pageTitle: 'Uw Abonnement',
+    pageDescription: 'Beheer uw maandelijkse voedingsdata-abonnement.',
+    noSubscription: 'U heeft geen actief abonnement.',
+  },
+  login: {
+    title: 'Welkom terug',
+    subtitle: 'Log in om voedingsproducten te zoeken',
+    email: 'E-mailadres',
+    password: 'Wachtwoord',
+    button: 'Inloggen',
+    loggingIn: 'Bezig met inloggen...',
+    error: 'Ongeldig e-mailadres of wachtwoord. Probeer het opnieuw.',
+    demoNote: 'Demo-inloggegevens',
+    demoEmail: 'demo@example.com',
+    demoPassword: 'password',
+  },
+  errors: {
+    searchFailed: 'Kan geen producten zoeken. Probeer het opnieuw.',
+    generic: 'Er is iets misgegaan. Probeer het opnieuw.',
+    networkError: 'Kan geen verbinding maken met de server. Is de backend actief?',
+  },
+};

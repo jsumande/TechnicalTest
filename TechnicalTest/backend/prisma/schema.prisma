@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+/// A demo user. Only one user exists (demo@example.com) — no registration flow.
+model User {
+  id                 String         @id @default(cuid())
+  email              String         @unique
+  passwordHash       String         /// bcrypt hash of the password
+
+  /// Stripe customer ID — set when the user initiates their first checkout
+  stripeCustomerId   String?        @unique
+
+  /// Active Stripe subscription ID
+  subscriptionId     String?        @unique
+
+  /// Subscription status driven by Stripe webhooks:
+  /// "inactive" | "active" | "canceled"
+  subscriptionStatus String         @default("inactive")
+
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+
+  /// Recent product searches made by this user
+  recentSearches     RecentSearch[]
+}
+
+/// A record of each search query the demo user has submitted.
+/// Used to display a "Recent Searches" panel on the homepage.
+model RecentSearch {
+  id        String   @id @default(cuid())
+  userId    String
+  query     String   @db.VarChar(255)    /// The raw search term entered by the user
+  language  String   @default("en")      /// Language code used for the search (en/nl/de/fr)
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  /// Index for efficient per-user history lookups
+  @@index([userId])
+}
