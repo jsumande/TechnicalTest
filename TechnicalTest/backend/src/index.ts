@@ -42,14 +42,15 @@ app.use(express.json());
 // Parse Cookie header so we can read `req.cookies.token`
 app.use(cookieParser());
 
-app.use(
-  cors({
-    origin: true, // Allow all origins temporarily while supporting credentials
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
-  }),
-);
+const corsOptions = {
+  origin: true, // Allow all origins temporarily while supporting credentials
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Routes
