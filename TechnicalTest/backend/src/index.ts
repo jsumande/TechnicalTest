@@ -42,36 +42,9 @@ app.use(express.json());
 // Parse Cookie header so we can read `req.cookies.token`
 app.use(cookieParser());
 
-const allowedOrigins = [
-  process.env.FRONTEND_URL?.replace(/\/+$/, ''),
-  'http://localhost:3000',
-  'http://localhost:3001',
-].filter(Boolean) as string[];
-
 app.use(
   cors({
-    origin: (origin, callback) => {
-      // Allow requests with no origin (like mobile apps or curl)
-      if (!origin) return callback(null, true);
-
-      let hostname = '';
-      try {
-        hostname = new URL(origin).hostname;
-      } catch {
-        // ignore invalid URL format
-      }
-
-      // Allow explicitly listed origins, any .vercel.app domain, or localhost
-      const isAllowed =
-        allowedOrigins.includes(origin) ||
-        (hostname.endsWith('.vercel.app') || hostname === 'vercel.app') ||
-        /^http:\/\/localhost:\d+$/.test(origin);
-
-      if (isAllowed) {
-        return callback(null, true);
-      }
-      return callback(new Error(`Origin ${origin} not allowed by CORS`));
-    },
+    origin: true, // Allow all origins temporarily while supporting credentials
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
