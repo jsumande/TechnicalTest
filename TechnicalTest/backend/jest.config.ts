@@ -8,7 +8,6 @@ import type { Config } from 'jest';
 const config: Config = {
   // Use ts-jest preset to handle TypeScript without a separate compile step
   preset: 'ts-jest',
-
   
   // Node environment for backend tests (not jsdom)
   testEnvironment: 'node',
